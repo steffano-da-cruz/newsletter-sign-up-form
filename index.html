@@ -3,17 +3,17 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+      rel="stylesheet"
+    />
     <link
       rel="icon"
       type="image/png"
       sizes="32x32"
       href="./assets/images/favicon-32x32.png"
-    />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap"
-      rel="stylesheet"
     />
     <link rel="stylesheet" href="./css/style.css" />
     <title>
@@ -21,39 +21,124 @@
     </title>
   </head>
   <body>
-    <main class="main-container">
-      <div class="left">
-        <h1 class="left-title">Stay updated!</h1>
-        <p class="left-description">
-          Join 60,000+ product managers receiving monthly updates on:
-        </p>
-        <ul class="features-list">
-          <li>
-            <img src="./assets/images/icon-list.svg" alt="icon-list" />
-            <span>Product discovery and building what matters</span>
-          </li>
-          <li>
-            <img src="./assets/images/icon-list.svg" alt="icon-list" />
-            <span>Measuring to ensure updates are a success</span>
-          </li>
-          <li>
-            <img src="./assets/images/icon-list.svg" alt="icon-list" />
-            <span>And much more!</span>
-          </li>
-        </ul>
-        <form class="subscribe-form">
-          <label>Email address</label>
-          <input type="email" placeholder="email@company.com" />
-          <button>Subscribe to monthly newsletter</button>
-        </form>
-      </div>
-      <div class="right">
+    <main class="subscription">
+      <section class="subscription-container">
+        <div class="subscription-information">
+          <h1 class="subscription-title">Stay updated!</h1>
+          <p class="subscription-description">
+            Join 60,000+ product managers receiving monthly updates on:
+          </p>
+          <ul class="subscription-features">
+            <li>
+              <svg
+                class="subscription-icon"
+                xmlns="http://www.w3.org/2000/svg"
+                width="21"
+                height="21"
+                viewBox="0 0 21 21"
+              >
+                <g fill="none">
+                  <circle cx="10.5" cy="10.5" r="10.5" fill="#FF6155" />
+                  <path
+                    stroke="#FFF"
+                    stroke-width="2"
+                    d="M6 11.381 8.735 14 15 8"
+                  />
+                </g>
+              </svg>
+              <span>Product discovery and building what matters</span>
+            </li>
+            <li>
+              <svg
+                class="subscription-icon"
+                xmlns="http://www.w3.org/2000/svg"
+                width="21"
+                height="21"
+                viewBox="0 0 21 21"
+              >
+                <g fill="none">
+                  <circle cx="10.5" cy="10.5" r="10.5" fill="#FF6155" />
+                  <path
+                    stroke="#FFF"
+                    stroke-width="2"
+                    d="M6 11.381 8.735 14 15 8"
+                  />
+                </g>
+              </svg>
+              <span>Measuring to ensure updates are a success</span>
+            </li>
+            <li>
+              <svg
+                class="subscription-icon"
+                xmlns="http://www.w3.org/2000/svg"
+                width="21"
+                height="21"
+                viewBox="0 0 21 21"
+              >
+                <g fill="none">
+                  <circle cx="10.5" cy="10.5" r="10.5" fill="#FF6155" />
+                  <path
+                    stroke="#FFF"
+                    stroke-width="2"
+                    d="M6 11.381 8.735 14 15 8"
+                  />
+                </g>
+              </svg>
+              <span>And much more!</span>
+            </li>
+          </ul>
+          <form class="subscription-form" name="sign-up" netlify>
+            <label>Email address</label>
+            <input
+              type="email"
+              placeholder="email@company.com"
+              name="email"
+              required
+            />
+            <button class="btn" type="submit">
+              Subscribe to monthly newsletter
+            </button>
+          </form>
+        </div>
         <img
-          class="right-image"
+          class="subscription-image"
           src="./assets/images/illustration-sign-up-desktop.svg"
-          alt="statistics"
+          alt="A screen and a browser"
         />
-      </div>
+      </section>
+      <section class="success-container">
+        <div class="success-information">
+          <svg
+            class="success-icon"
+            xmlns="http://www.w3.org/2000/svg"
+            width="64"
+            height="64"
+            viewBox="0 0 64 64"
+          >
+            <defs>
+              <linearGradient id="a" x1="100%" x2="0%" y1="0%" y2="100%">
+                <stop offset="0%" stop-color="#FF6A3A" />
+                <stop offset="100%" stop-color="#FF527B" />
+              </linearGradient>
+            </defs>
+            <g fill="none">
+              <circle cx="32" cy="32" r="32" fill="url(#a)" />
+              <path
+                stroke="#FFF"
+                stroke-width="4"
+                d="m18.286 34.686 8.334 7.98 19.094-18.285"
+              />
+            </g>
+          </svg>
+          <h2 class="success-title">Thanks for subscribing!</h2>
+          <p class="success-description">
+            A confirmation email has been sent to
+            <strong>ash@loremcompany.com</strong>. Please open it and click the
+            button inside to confirm your subscription.
+          </p>
+          <button class="btn">Dismiss message</button>
+        </div>
+      </section>
     </main>
     <script src="./js/script.js"></script>
   </body>
