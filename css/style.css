@@ -1,0 +1,105 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+  color: #242742;
+  background-color: #36384f;
+}
+
+.main-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #ffffff;
+  width: 55rem;
+  margin: 10rem auto;
+  border-radius: 2rem;
+}
+
+/*Left content*/
+
+.left {
+  width: 22.2rem;
+  margin-left: 3.9rem;
+}
+
+.left-title,
+.left-description {
+  margin-bottom: 1.2rem;
+}
+
+.left-title {
+  font-size: 3.5rem;
+}
+
+.left-description,
+.features-list li {
+  font-size: 1rem;
+}
+
+.left-description {
+  line-height: 1.5rem;
+}
+
+.features-list {
+  list-style: none;
+  margin-bottom: 2.1rem;
+}
+
+.features-list li {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 0.8rem;
+}
+
+.subscribe-form {
+  display: flex;
+  flex-direction: column;
+}
+
+.subscribe-form label {
+  font-size: 0.8rem;
+  font-weight: 700;
+  margin-bottom: 0.7rem;
+}
+
+.subscribe-form input,
+.subscribe-form button {
+  font-size: 0.9rem;
+  height: 3.4rem;
+  width: 22.2rem;
+  border-radius: 0.5rem;
+}
+
+.subscribe-form input {
+  border: 0.1rem solid #c5c5c5;
+  margin-bottom: 1.4rem;
+  text-align: left;
+  padding: 0 1.3rem;
+}
+
+.subscribe-form button {
+  color: #ffffff;
+  font-weight: 700;
+  background-color: #242742;
+  cursor: pointer;
+}
+
+.subscribe-form button:hover {
+  background-color: #363852;
+}
+
+/*Right content*/
+
+.right {
+  padding: 1.6rem 1.6rem 1.6rem 0;
+}
+
+.right-image {
+  width: 23rem;
+}
