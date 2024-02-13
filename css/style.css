@@ -89,7 +89,7 @@ body {
 }
 
 .subscription-title {
-  font-size: 4.8rem;
+  font-size: 4.9rem;
   margin-bottom: 1.4rem;
 }
 
@@ -120,7 +120,7 @@ body {
 
 .subscription-form label {
   font-size: 1.1rem;
-  margin-bottom: 0.8rem;
+  margin-bottom: 0.9rem;
 }
 
 .subscription-form input {
@@ -133,13 +133,16 @@ body {
   opacity: 0.8;
 }
 
-.subscription-image {
+.subscription-desktop-img {
   padding: 2rem 2rem 2rem 0;
+}
+
+.subscription-mobile-img {
+  display: none;
 }
 
 /* SUCCESS SECTION */
 .success-container {
-  display: none;
   background-color: #fff;
   height: 44.9rem;
   width: 43.3rem;
@@ -164,4 +167,123 @@ body {
 
 .success-description {
   margin-bottom: 3.5rem;
+}
+
+/* MEDIA QUERIES */
+
+/* 848px / 16 = 53 */
+@media (max-width: 53em) {
+  .subscription-container,
+  .success-container {
+    display: flex;
+    flex-direction: column;
+    height: 84rem;
+    width: 37.6rem;
+    margin: 4.4rem auto 0 auto;
+    border-radius: 0;
+  }
+
+  .subscription-desktop-img {
+    display: none;
+  }
+
+  .subscription-mobile-img {
+    display: block;
+    order: 1;
+  }
+
+  .subscription-information {
+    order: 2;
+    padding: 3.1rem 2.4rem 2.4rem 2.4rem;
+  }
+
+  .subscription-title {
+    font-size: 4rem;
+    margin-bottom: 1.8rem;
+  }
+
+  .subscription-description {
+    margin-bottom: 2.6rem;
+  }
+
+  .subscription-features {
+    margin-bottom: 3.1rem;
+  }
+
+  .subscription-description,
+  .subscription-features li {
+    font-size: 1.6rem;
+  }
+
+  .subscription-features li {
+    gap: 1.5rem;
+    align-items: flex-start;
+    margin-bottom: 1.2rem;
+  }
+
+  .subscription-icon {
+    width: 2.3rem;
+  }
+
+  .subscription-form label {
+    font-size: 1.2rem;
+  }
+
+  .subscription-form input {
+    padding: 2rem 2.4rem;
+    margin-bottom: 2.3rem;
+  }
+
+  .subscription-form input::placeholder {
+    font-size: 1.6rem;
+  }
+
+  .subscription-button,
+  .success-button {
+    font-size: 1.5rem;
+    font-weight: 600;
+    padding: 2rem;
+  }
+
+  .success-information {
+    order: 2;
+    padding: 3.1rem 2.4rem 2.4rem 2.4rem;
+    margin-top: 13.2rem;
+  }
+
+  .success-icon {
+    width: 6.6rem;
+    margin-bottom: 4.2rem;
+  }
+
+  .success-title {
+    font-size: 4rem;
+    letter-spacing: 0;
+    line-height: 4rem;
+    margin-bottom: 2.4rem;
+  }
+
+  .success-description {
+    font-size: 1.6rem;
+    margin-bottom: 26.2rem;
+    line-height: 2.4rem;
+  }
+}
+
+/* 432px / 16 = 27 */
+
+@media (max-width: 27em) {
+  html {
+    font-size: 55%;
+  }
+
+  .subscription-container,
+  .success-container {
+    margin: 10rem auto 0 auto;
+  }
+}
+
+/* SWITCH BETWEEN SUBSCRIPTION AND SUCCESS */
+.hidden {
+  display: none;
 }

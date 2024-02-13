@@ -87,26 +87,32 @@
               <span>And much more!</span>
             </li>
           </ul>
-          <form class="subscription-form" name="sign-up" netlify>
+          <form class="subscription-form" name="subscribe" netlify>
             <label>Email address</label>
             <input
+              class="subscription-input"
               type="email"
               placeholder="email@company.com"
               name="email"
               required
             />
-            <button class="btn" type="submit">
+            <button class="btn subscription-button" type="submit">
               Subscribe to monthly newsletter
             </button>
           </form>
         </div>
         <img
-          class="subscription-image"
+          class="subscription-desktop-img"
           src="./assets/images/illustration-sign-up-desktop.svg"
           alt="A screen and a browser"
         />
+        <img
+          class="subscription-mobile-img"
+          src="./assets/images/illustration-sign-up-mobile.svg"
+          alt="A screen and a browser"
+        />
       </section>
-      <section class="success-container">
+      <section class="success-container hidden">
         <div class="success-information">
           <svg
             class="success-icon"
@@ -136,7 +142,7 @@
             <strong>ash@loremcompany.com</strong>. Please open it and click the
             button inside to confirm your subscription.
           </p>
-          <button class="btn">Dismiss message</button>
+          <button class="btn success-button">Dismiss message</button>
         </div>
       </section>
     </main>
