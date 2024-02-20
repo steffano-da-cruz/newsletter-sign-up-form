@@ -47,17 +47,17 @@ body {
 /* REFACTORED */
 .subscription-description,
 .subscription-features li,
-.subscription-form input::placeholder,
+.subscription-input::placeholder,
 .success-description {
   font-size: 1.4rem;
 }
 
 .subscription-title,
-.subscription-form label {
+.subscription-label {
   font-weight: 800;
 }
 
-.subscription-form input,
+.subscription-input,
 .btn {
   border-radius: 0.7rem;
 }
@@ -118,18 +118,20 @@ body {
   flex-direction: column;
 }
 
-.subscription-form label {
+.subscription-label {
+  display: flex;
+  justify-content: space-between;
   font-size: 1.1rem;
   margin-bottom: 0.9rem;
 }
 
-.subscription-form input {
+.subscription-input {
   margin-bottom: 1.8rem;
   border: 0.1rem solid #cecece;
   padding: 1.6rem 1.9rem;
 }
 
-.subscription-form input::placeholder {
+.subscription-input::placeholder {
   opacity: 0.8;
 }
 
@@ -225,16 +227,16 @@ body {
     width: 2.3rem;
   }
 
-  .subscription-form label {
+  .subscription-label {
     font-size: 1.2rem;
   }
 
-  .subscription-form input {
+  .subscription-input {
     padding: 2rem 2.4rem;
     margin-bottom: 2.3rem;
   }
 
-  .subscription-form input::placeholder {
+  .subscription-input::placeholder {
     font-size: 1.6rem;
   }
 
