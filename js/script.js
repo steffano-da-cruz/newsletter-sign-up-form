@@ -3,20 +3,49 @@
 const subscriptionInp = document.querySelector(".subscription-input");
 const subscriptionBtn = document.querySelector(".subscription-button");
 const subscriptionCont = document.querySelector(".subscription-container");
+const successEmail = document.querySelector(".success-email");
+const successBtn = document.querySelector(".success-button");
 const successCont = document.querySelector(".success-container");
-const subscriptionError = document.querySelector(".subscription-error");
+const errorMessage = document.querySelector(".error-message");
+const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
-subscriptionBtn.addEventListener("click", function () {
-  const inputValue = subscriptionInp.value;
+let inputValue = "";
 
-  if (inputValue.includes("@")) {
-    subscriptionCont.classList.toggle("hidden");
-    successCont.classList.toggle("hidden");
+const switchCont = function () {
+  subscriptionCont.classList.toggle("hidden");
+  successCont.classList.toggle("hidden");
+};
+
+const inputReset = function () {
+  if (!errorMessage.classList.contains("hidden")) {
+    errorMessage.classList.toggle("hidden");
+    subscriptionInp.style.color = "#242742";
+    subscriptionInp.style.borderColor = "#cecece";
+    subscriptionInp.style.backgroundColor = "#ffffff";
+  }
+};
+
+subscriptionBtn.addEventListener("click", function (e) {
+  e.preventDefault();
+  inputValue = subscriptionInp.value;
+
+  if (emailRegex.test(inputValue)) {
+    switchCont();
+    successEmail.textContent = inputValue;
   } else {
-    subscriptionError.classList.toggle("hidden");
-    subscriptionError.style.color = "#ff6257";
+    errorMessage.classList.remove("hidden");
+    errorMessage.style.color = "#ff6257";
     subscriptionInp.style.color = "#ff6257";
     subscriptionInp.style.borderColor = "#ff6257";
     subscriptionInp.style.backgroundColor = "#ffa8a34d";
   }
+});
+
+subscriptionInp.addEventListener("click", inputReset);
+subscriptionInp.addEventListener("keydown", inputReset);
+
+successBtn.addEventListener("click", function () {
+  switchCont();
+  subscriptionInp.value = "";
+  subscriptionInp.focus();
 });
