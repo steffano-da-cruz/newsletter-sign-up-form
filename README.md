@@ -3,7 +3,7 @@
 ![Newsletter](/assets/images/newsletter-sign-up-mobile.png)
 
 ## 💻 About the project
-A challenge from the Frontend Mentor website. A form where the user can subscribe for a newsletter. Dont't forget to give it a try on mobile, because this web page is responsive!
+A challenge from the Frontend Mentor website. A form where the user can subscribe for a newsletter. Don't forget to give it a try on mobile, because this web page is responsive!
 
 ## 🛠 Technologies used
 - HTML5
