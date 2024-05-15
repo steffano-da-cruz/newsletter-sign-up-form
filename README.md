@@ -1,5 +1,6 @@
 # Newsletter Sign Up Form
-![Monthly Bills](/assets/images/newsletter-sign-up-form.png)
+![Newsletter](/assets/images/newsletter-sign-up-form.png)
+![Newsletter](/assets/images/newsletter-sign-up-form-mobile.png)
 
 ## 💻 About the project
 A challenge from the Frontend Mentor website. A form where the user can subscribe for a newsletter. Dont't forget to give it a try on mobile, because this web page is responsive!
